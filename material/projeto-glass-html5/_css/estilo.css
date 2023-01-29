@@ -1,3 +1,4 @@
+
 @charset "utf8";
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap');
 
@@ -5,7 +6,10 @@
     font-family: 'FonteLogo';
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
-
+:root{
+    margin: none;
+    padding: none;
+}
 p {
     text-align: justify;
     text-indent: 50px;
@@ -14,19 +18,17 @@ p {
 /*Corpo: Cores do fundo e da letra.*/
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(176, 221, 208);
+    background-color:#dddddd;
     color: rgb(0, 0, 0);
 }
 
 /*Caixa central: tamanho, cor, margem  para centralizar, sombra e borda interna*/
 div#interface {
-    width: 900px;
-    background-color: rgb(127, 178, 199);
+    width: 920px;
+    background-color: #ffffff;
     margin: -20px auto 0px auto;
-    box-shadow: 0px 0px010px rgba(58, 37, 37, 0.8);
-    padding-left: 20px;
-    padding-right: 0px;
-    padding-top: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,0.5);
+    padding: 10px;
 }
 a{
     color: #464444;
@@ -38,14 +40,14 @@ a:hover{
 }
 /*Imagem do cabecalho (oculos pequeno): posicionamento*/
 header#cabecalho img#icone {
-position: relative;
-top: -30px;
-right:-700px;
+position: absolute;
+left:  780px;
+top: 70px;
 }
 
 /*Cabecalho: Linha divisoria*/
 header#cabecalho {
-    border-bottom: 1px #464444 solid;
+    border-bottom: 1px #606060 solid;
     height: 150px;
     background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 95px;
 }
@@ -56,6 +58,7 @@ header#cabecalho h1 {
     color: #606060;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     padding: 0px;
+    margin-bottom: 0px;
 
 }
 
@@ -65,7 +68,7 @@ header#cabecalho h2 {
     font-size: 15pt;
     padding: 0px;
     margin-bottom: 0px;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 /* Moldura foto com legenda: posicionamento, cor e sombra.*/
@@ -105,7 +108,7 @@ figure.foto_legenda:hover figcaption {
 
 /* Formataçao do menu*/
 nav#menu {
-    display: list-item;
+    display: block;
 
 }
 
@@ -113,15 +116,15 @@ nav#menu ul {
     list-style: none;
     text-transform: uppercase;
     position: absolute;
-    top: -15px;
-    right: 300px;
+    top: -20px;
+    right: 40px;
 }
 
 nav#menu li {
     display: inline-block;
     background-color: #d4d4d4;
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
+    margin: 2px;
     transition: background-color 2s;
 }
 
@@ -140,7 +143,8 @@ nav#menu a {
 }
 
 nav#menu a:hover {
-    color: rgb(219, 232, 250)
+    color: rgb(219, 232, 250);
+    text-decoration: underline;
 }
 
 section#corpo {
@@ -153,7 +157,7 @@ section#corpo {
 
 aside#lateral {
     display: block;
-    width: 334px;
+    width: 352px;
     height: 1500px;
     float: right;
     background-color: #836baa;
