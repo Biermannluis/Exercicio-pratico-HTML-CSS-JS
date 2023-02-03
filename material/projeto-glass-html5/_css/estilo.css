@@ -1,11 +1,7 @@
 
-@charset "utf8";
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap');
+@charset 'UTF-8';
 
-@font-face {
-    font-family: 'FonteLogo';
-    src: url("../_fonts/bubblegum-sans-regular.otf");
-}
+
 :root{
     margin: none;
     padding: none;
@@ -17,18 +13,20 @@ p {
 
 /*Corpo: Cores do fundo e da letra.*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var('--font-standart');
     background-color:#dddddd;
     color: rgb(0, 0, 0);
 }
 
 /*Caixa central: tamanho, cor, margem  para centralizar, sombra e borda interna*/
 div#interface {
-    width: 920px;
+    width: 60vw;
+    max-width: 60vw;
     background-color: #ffffff;
-    margin: -20px auto 0px auto;
+    margin: 0 auto 0 auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0,0.5);
-    padding: 10px;
+    padding: 1.5vw;
+    
 }
 a{
     color: #464444;
@@ -41,40 +39,17 @@ a:hover{
 /*Imagem do cabecalho (oculos pequeno): posicionamento*/
 header#cabecalho img#icone {
 position: absolute;
-left:  780px;
-top: 70px;
+left:  69vw;
+top: 4.5vw; 
 }
 
 /*Cabecalho: Linha divisoria*/
-header#cabecalho {
-    border-bottom: 1px #606060 solid;
-    height: 150px;
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 95px;
-}
 
-header#cabecalho h1 {
-    font-family: 'FonteLogo', Helvetica, sans-serif;
-    font-size: 30px;
-    color: #606060;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-    padding: 0px;
-    margin-bottom: 0px;
-
-}
-
-header#cabecalho h2 {
-    font-family: 'Titillium Web', sans-serif;
-    color: #888888;
-    font-size: 15pt;
-    padding: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
 
 /* Moldura foto com legenda: posicionamento, cor e sombra.*/
 figure.foto_legenda {
     position: relative;
-    border: 10px solid white;
+    border: .3vw solid white;
     box-shadow: 1px 1px 4px black;
 }
 
@@ -97,7 +72,7 @@ figure.foto_legenda figcaption {
     color: white;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 1.5vw;
     box-sizing: border-box;
     transition: opacity 1s;
 }
@@ -116,20 +91,29 @@ nav#menu ul {
     list-style: none;
     text-transform: uppercase;
     position: absolute;
-    top: -20px;
-    right: 40px;
+    top: 0;
+    right: 20.55vw;
+    
 }
 
 nav#menu li {
     display: inline-block;
-    background-color: #d4d4d4;
-    padding: 10px;
-    margin: 2px;
-    transition: background-color 2s;
+    background-color:var('--li');
+    padding: .3vw 1vw .3vw 1vw;
+    margin-left: 0.2vw;
+    /*transition: background-color 2s;*/
+    font-size: .8em;
+    box-shadow: 2px 3px 7px rgba(0,0,0,.2);
+
 }
 
 nav#menu li:hover {
-    background-color: #606060;
+    background-color:var('--li-hover');
+    border-radius: 20%;
+    -webkit-transform: scale(1.2);
+    transition: 2s;
+    
+
 }
 
 nav#menu h1 {
@@ -142,36 +126,33 @@ nav#menu a {
 
 }
 
-nav#menu a:hover {
-    color: rgb(219, 232, 250);
-    text-decoration: underline;
-}
+
 
 section#corpo {
     display: block;
-    width: 520px;
+    width: 33vw;
     float: left;
     border-right: 1px solid #606060;
-    padding-right: 15px;
+    padding-right: 2vw;
 }
 
 aside#lateral {
     display: block;
-    width: 352px;
-    height: 1500px;
+    width: 23.38vw;
+    height: 70vw;
     float: right;
     background-color: #836baa;
     padding: 15px;
 }
 aside#lateral h1{
-    font-family: 'FonteLogo', sans-serif;
+    font-family: var(--font-google);
     font-size: 20pt;
     color: #ffffff;
     margin: 2px 20px 20px 0px;
    
 }
 aside#lateral h2{
-    font-family: 'FonteLogo', sans-serif;
+    font-family: var(--font-google);
     font-size: 12pt;
     color: #c4c4c4;
 }
@@ -189,16 +170,18 @@ article#noticia-principal h2 {
     font-size: 12pt;
     color: #606060;
     background-color: #dddddd;
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
+    padding: .5vw;
+    margin: .5vw;
 }
 
 header#cabecalho-artigo h1 {
-    font-family: 'FonteLogo', sans-serif;
+    font-family:  var(--font-google);
     font-size: 20pt;
     color: #606060;
     margin-bottom: 0px;
     margin-top:0 ;
+
+    
 
 }
 
@@ -228,7 +211,7 @@ table#tabelaspec {
 
 table#tabelaspec td {
     border: 1px solid #606060;
-    padding: 10px;
+    padding: .5vw;
     text-align: right;
 }
 
@@ -264,5 +247,5 @@ table#tabelaspec span {
     float: right;
     color: #000000;
     font-size: 8pt;
-    margin-top: 10px;
+    margin: 2vw auto 0 auto;
 }
